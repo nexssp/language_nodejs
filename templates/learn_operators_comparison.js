@@ -35,12 +35,14 @@ console.log('"369" !== 369 ->', "369" !== 369); //true
 console.log("369 !== 963 ->", 369 !== 963); //true
 
 // Greater than operator (>) and Less than operator (<)
+// a > b, a < b
 console.log("");
 console.log("Greater than operator (>) and Less than operator (<)");
 console.log("963 > 369 ->", 963 > 369); //true
 console.log("963 < 369 ->", 963 < 369); //false
 
 // Greater than or equal operator (>=) and Less than or equal operator (<=)
+// a >= b, a <= b
 console.log("");
 console.log(
   "Greater than or equal operator (>=) and Less than or equal operator (<=)"
