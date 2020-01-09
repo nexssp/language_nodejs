@@ -56,4 +56,4 @@ function getScore() {
   return add();
 }
 
-getScore(); // Returns "Chamahk scored 5"
+console.log(getScore()); // Returns "Chamahk scored 5"
