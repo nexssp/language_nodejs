@@ -20,7 +20,7 @@ languageConfig.builders = {
 };
 languageConfig.compilers = {
   node: {
-    install: "scoop install node",
+    install: "scoop install nodejs-lts",
     // Cpp does not have possibility to compile and run on the fly. We need to save it as a exe file first.
     command: "node",
     args: "<file>",
