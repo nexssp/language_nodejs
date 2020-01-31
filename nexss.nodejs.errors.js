@@ -3,8 +3,9 @@ module.exports = {
   "Cannot open include file: 'dns_sd.h'": `Do you have bonjour SDK installed? 
 https://developer.apple.com/download/more/
 (Remember to restart your computer after installation.)`,
-  "ReferenceError:  (?<found1>.*?) is not defined":
-    "Define '<found1>' before you use it."
+  "ReferenceError: (.*?) is not defined":
+    "Define '<found1>' before you use it.",
+  "Unexpected token": "Did you forget semi-color ';' ?"
 };
 // LINUX:
 //  "Cannot open include file: 'dns_sd.h'": {
