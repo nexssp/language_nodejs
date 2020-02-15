@@ -3,6 +3,11 @@ languageConfig.title = "NodeJS";
 languageConfig.description =
   "Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine.";
 languageConfig.url = "https://nodejs.org";
+languageConfig.founders = ["Ryan Dahl"];
+languageConfig.developers = [
+  "https://github.com/nodejs/node/blob/master/AUTHORS"
+];
+languageConfig.years = ["2009"];
 languageConfig.extensions = [".js"];
 languageConfig.executeCommandLine = "node -e";
 languageConfig.printCommandLine = "node -p"; //no console.log() needed to display result eg node -p "4+6"
