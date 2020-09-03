@@ -1,4 +1,7 @@
-let languageConfig = Object.assign({}, require("../config.win32"));
+let languageConfig = Object.assign(
+  {},
+  require(`../config.${process.platform}`)
+);
 languageConfig.title = "NodeJS";
 languageConfig.description =
   "Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine.";
