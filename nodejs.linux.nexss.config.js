@@ -1,8 +1,13 @@
 let languageConfig = Object.assign({}, require("./nodejs.win32.nexss.config"));
 
+let sudo = "sudo ";
+if (process.getuid && process.getuid() === 0) {
+  sudo = "";
+}
+
 languageConfig.compilers = {
   node: {
-    install: "apt install nodejs", // but this is installed already.
+    install: `${sudo}apt install nodejs`, // but this is installed already.
     command: "node",
     args: "<file>",
     help: ``,
