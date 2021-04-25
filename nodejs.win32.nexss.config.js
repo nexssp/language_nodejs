@@ -21,7 +21,7 @@ languageConfig.editors = {
     extensions: ["ms-vscode.node-debug2"],
   },
 }; // defined in \.nexss\languages\config.win32.js (copy from .nexssCli\nexss-language\languages\)
-languageConfig.executeCommandLine = "node -e";
+languageConfig.run = "node -e";
 languageConfig.printCommandLine = "node -p"; //no console.log() needed to display result eg node -p "4+6"
 languageConfig.checkSyntax = "node -c";
 languageConfig.interactiveShell = "node";
