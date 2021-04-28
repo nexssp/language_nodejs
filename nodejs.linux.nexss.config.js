@@ -1,9 +1,6 @@
 let languageConfig = Object.assign({}, require("./nodejs.win32.nexss.config"));
 
-let sudo = "sudo ";
-if (process.getuid && process.getuid() === 0) {
-  sudo = "";
-}
+let sudo = process.sudo;
 
 languageConfig.compilers = {
   node: {
@@ -14,18 +11,13 @@ languageConfig.compilers = {
   },
 };
 
-if (require("fs").existsSync(`${process.env.NEXSS_SRC_PATH}/lib/osys.js`)) {
-  const {
-    replaceCommandByDist,
-    dist,
-  } = require(`${process.env.NEXSS_SRC_PATH}/lib/osys`);
+const distro = process.distro;
 
-  // This function just replace all apt-get,apt to the right distribution pkg installer.
-  languageConfig.compilers.node.install = replaceCommandByDist(
-    languageConfig.compilers.node.install
-  );
+// This function just replace all apt-get,apt to the right distribution pkg installer.
+languageConfig.compilers.node.install = process.replacePMByDistro(
+  languageConfig.compilers.node.install
+);
 
-  languageConfig.dist = dist();
-}
+languageConfig.dist = distro;
 
 module.exports = languageConfig;
