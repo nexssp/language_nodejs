@@ -11,7 +11,7 @@ languageConfig.developers = [
   "https://github.com/nodejs/node/blob/master/AUTHORS",
 ];
 languageConfig.years = ["2009"];
-languageConfig.extensions = [".js"];
+languageConfig.extensions = [".js", ".mjs"];
 languageConfig.licenses = [
   "MIT https://github.com/nodejs/node/blob/master/LICENSE",
 ];
