@@ -9,6 +9,16 @@ languageConfig.compilers = {
     args: "<file>",
     help: ``,
   },
+  deno: {
+    install:
+      process.replacePMByDistro(`${sudo}apt-get install unzip`) +
+      `
+curl -fsSL https://deno.land/x/install/install.sh | sh`,
+    command: "deno",
+    args: "run <file>",
+    help: ``,
+    templates: "templates_deno",
+  },
 };
 
 const distro = process.distro;

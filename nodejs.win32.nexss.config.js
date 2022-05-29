@@ -42,6 +42,13 @@ languageConfig.compilers = {
     args: "<file>",
     help: ``,
   },
+  deno: {
+    install: "scoop install deno",
+    command: "deno",
+    args: "run <file>",
+    help: ``,
+    templates: "templates_deno",
+  },
 };
 languageConfig.errors = require("./nexss.nodejs.errors");
 languageConfig.languagePackageManagers = {
@@ -55,20 +62,27 @@ languageConfig.languagePackageManagers = {
     help: "npm help",
     version: "npm --version",
     init: () => {
-      if (
-        !require("fs").existsSync(
-          require("path").join(process.cwd(), "package.json")
-        )
-      ) {
-        require("child_process").execSync("npm init -y", { stdio: "inherit" });
-        console.log("initialized npm project.");
+      const { existsSync } = require("fs");
+      const { join } = require("path");
+      const { execSync } = require("child_process");
+      if (!existsSync(join(process.cwd(), "package.json"))) {
+        console.log("Setup npm project");
+        execSync("npm init -y");
+        console.log("Setup npm project: done.");
       } else {
-        console.log("npm already initialized.");
+        console.log("npm project already initialized.");
+      }
+
+      if (!existsSync(join(process.cwd(), ".gitignore"))) {
+        console.log("Creating .gitignore");
+        execSync("npx gitignore node"); // creates tsconfig.json with all the descriptions
+      } else {
+        console.log(".gitignore is already setup");
       }
     },
     // if command not found in specification
     // run directly on package manager
-    else: "npm <default> <args>",
+    else: "npm",
   },
   yarn: {
     installation: "scoop install yarn",
