@@ -30,8 +30,6 @@ nexss js default compiler node # to set the Node.js compiler
 nexss js default compiler unset # to reset to defaults (Node.js)
 
 nexss js default compiler --nocache # use --nocache if you have changed configuration files manually
-
-nexss f a my.js --compiler=deno --nocache
 ```
 
 OR put at the top of your file/program. If will install compiler on 'nexss yourprogram.js'
