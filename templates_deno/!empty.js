@@ -1,0 +1,1 @@
+// nexss-compiler: deno

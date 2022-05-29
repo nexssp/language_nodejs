@@ -1,3 +1,4 @@
+// nexss-compiler: deno
 // Deno runtime helloWorld.js for Nexss Programmer 2.x
 
 const buf = new Uint8Array(4096); // Adjust to your needs
