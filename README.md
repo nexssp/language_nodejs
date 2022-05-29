@@ -27,7 +27,7 @@ and type learn for finding templates which starts with 'learn' keyword. [Picture
 nexss js default compiler # displays all available runtimes/compilers
 nexss js default compiler deno # to set the Deno compiler
 nexss js default compiler node # to set the Node.js compiler
-nexss lua default compiler unset # to reset to defaults (Node.js)
+nexss js default compiler unset # to reset to defaults (Node.js)
 
 nexss js default compiler --nocache # use --nocache if you have changed configuration files manually
 
