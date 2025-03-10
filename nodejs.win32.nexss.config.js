@@ -36,6 +36,12 @@ languageConfig.builders = {
   },
 };
 languageConfig.compilers = {
+  bun: {
+    install: "scoop install bun",
+    command: "bun",
+    args: "run <file>",
+    help: ``,
+  },
   node: {
     install: "scoop install nodejs-lts",
     command: "node",

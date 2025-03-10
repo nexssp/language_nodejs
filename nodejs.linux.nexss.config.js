@@ -3,6 +3,12 @@ let languageConfig = Object.assign({}, require("./nodejs.win32.nexss.config"));
 let sudo = process.sudo;
 
 languageConfig.compilers = {
+  bun: {
+    install: "curl -fsSL https://bun.sh/install | bash",
+    command: "bun",
+    args: "run <file>",
+    help: ``,
+  },
   node: {
     install: `${sudo}apt install nodejs`, // but this is installed already.
     command: "node",
